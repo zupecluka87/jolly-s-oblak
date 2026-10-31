@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hero – JOLLY-S</title>
+<style>
+:root{
+  --bg:#faf7f2;--bg-alt:#f3eee6;--surface:#fffdf9;--ink:#2b2622;--ink-soft:#6b625a;
+  --accent:#8a6a47;--accent-dark:#6e5236;--line:#e4dccf;--focus:#1f5f8b;
+  --font-serif:Georgia,"Times New Roman",serif;--font-sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --space:clamp(4rem,9vw,8rem);--radius:4px;--max:72rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+h1,h2,h3{font-family:var(--font-serif);font-weight:400;line-height:1.2;margin:0}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dark);margin:0 0 1rem}
+.btn{display:inline-block;background:var(--ink);color:var(--surface);padding:.95rem 2rem;border:0;border-radius:var(--radius);font:inherit;font-size:.95rem;letter-spacing:.04em;text-decoration:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--accent-dark)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.hero{min-height:min(88vh,50rem);display:grid;align-items:center;padding-block:var(--space);background:linear-gradient(180deg,var(--bg),var(--bg-alt))}
+.hero__inner{display:grid;gap:3rem;grid-template-columns:1fr;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5.5vw,4rem);max-width:16ch}
+.hero p.lead{font-size:clamp(1rem,1.6vw,1.2rem);color:var(--ink-soft);max-width:38rem;margin:1.5rem 0 2.5rem}
+.hero__media{aspect-ratio:4/5;background:var(--line);border-radius:var(--radius);display:grid;place-items:center;color:var(--ink-soft);font-size:.85rem;text-align:center;padding:1rem}
+@media(min-width:56rem){.hero__inner{grid-template-columns:1.1fr .9fr}}
+</style>
+</head>
+<body>
+<header class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero__inner">
+    <div>
+      <p class="eyebrow">JOLLY-S d.o.o. · mizarstvo</p>
+      <h1 id="hero-title">Pohištvo, ki ga naredimo po vaši meri.</h1>
+      <p class="lead">Kuhinje, garderobe in vgradne omare, načrtovane za vaš prostor in izdelane v naši delavnici, od prve skice do montaže.</p>
+      <a class="btn" href="#povprasevanje">Pošlji povpraševanje</a>
+    </div>
+    <div class="hero__media" role="img" aria-label="Mesto za fotografijo: kuhinja po meri">[ Mesto za fotografijo ]</div>
+  </div>
+</header>
+</body>
+</html>

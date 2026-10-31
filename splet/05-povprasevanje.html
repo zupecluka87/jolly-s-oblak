@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Povpraševanje – JOLLY-S</title>
+<style>
+:root{
+  --bg:#faf7f2;--bg-alt:#f3eee6;--surface:#fffdf9;--ink:#2b2622;--ink-soft:#6b625a;
+  --accent:#8a6a47;--accent-dark:#6e5236;--line:#e4dccf;--focus:#1f5f8b;
+  --font-serif:Georgia,"Times New Roman",serif;--font-sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --space:clamp(4rem,9vw,8rem);--radius:4px;--max:72rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+h1,h2,h3{font-family:var(--font-serif);font-weight:400;line-height:1.2;margin:0}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dark);margin:0 0 1rem}
+.btn{display:inline-block;background:var(--ink);color:var(--surface);padding:.95rem 2rem;border:0;border-radius:var(--radius);font:inherit;font-size:.95rem;letter-spacing:.04em;text-decoration:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--accent-dark)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+section{padding-block:var(--space);background:var(--bg-alt)}
+.wrap{max-width:44rem}
+h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+.intro{color:var(--ink-soft);margin:1.25rem 0 2.5rem}
+form{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.5rem,5vw,3rem);display:grid;gap:1.5rem}
+.field{display:grid;gap:.4rem}
+label,legend{font-size:.9rem;font-weight:500}
+.req{color:var(--accent-dark)}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:.8rem 1rem}
+textarea{min-height:9rem;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--focus)}
+.consent{display:flex;gap:.75rem;align-items:flex-start;font-size:.88rem;color:var(--ink-soft)}
+.consent input{margin-top:.25rem;width:1.1rem;height:1.1rem;accent-color:var(--accent-dark)}
+.consent label{font-weight:400}
+.consent a{color:var(--accent-dark)}
+.note{font-size:.8rem;color:var(--ink-soft);margin:0}
+@media(min-width:40rem){.row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}}
+</style>
+</head>
+<body>
+<section id="povprasevanje" aria-labelledby="obr-title">
+  <div class="wrap">
+    <p class="eyebrow">Kontakt</p>
+    <h2 id="obr-title">Pošljite povpraševanje</h2>
+    <p class="intro">Opišite svoj prostor in želje, odgovorimo vam v najkrajšem možnem času.</p>
+    <!-- Predloga: pošiljanje ni povezano. Dodajte action/method ali skripto ročno. -->
+    <form novalidate onsubmit="return false">
+      <div class="row">
+        <div class="field"><label for="ime">Ime in priimek <span class="req" aria-hidden="true">*</span></label><input type="text" id="ime" name="ime" autocomplete="name" required></div>
+        <div class="field"><label for="email">E-pošta <span class="req" aria-hidden="true">*</span></label><input type="email" id="email" name="email" autocomplete="email" required></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="tel">Telefon</label><input type="tel" id="tel" name="telefon" autocomplete="tel"></div>
+        <div class="field"><label for="prostor">Vrsta prostora <span class="req" aria-hidden="true">*</span></label>
+          <select id="prostor" name="prostor" required>
+            <option value="">Izberite …</option><option>Kuhinja</option><option>Garderoba</option><option>Vgradna omara</option><option>Drugo</option>
+          </select></div>
+      </div>
+      <div class="field"><label for="opis">Opis</label><textarea id="opis" name="opis" aria-describedby="opis-n"></textarea><p class="note" id="opis-n">Npr. okvirne mere, želje glede videza in funkcije.</p></div>
+      <div class="consent"><input type="checkbox" id="gdpr" name="gdpr" required><label for="gdpr">Soglašam z obdelavo osebnih podatkov za namen odgovora na povpraševanje v skladu z <a href="#">politiko zasebnosti</a>. <span class="req" aria-hidden="true">*</span></label></div>
+      <div><button class="btn" type="submit">Pošlji povpraševanje</button></div>
+      <p class="note">Polja z * so obvezna.</p>
+    </form>
+  </div>
+</section>
+</body>
+</html>

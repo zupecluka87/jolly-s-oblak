@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kako poteka izdelava – JOLLY-S</title>
+<style>
+:root{
+  --bg:#faf7f2;--bg-alt:#f3eee6;--surface:#fffdf9;--ink:#2b2622;--ink-soft:#6b625a;
+  --accent:#8a6a47;--accent-dark:#6e5236;--line:#e4dccf;--focus:#1f5f8b;
+  --font-serif:Georgia,"Times New Roman",serif;--font-sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --space:clamp(4rem,9vw,8rem);--radius:4px;--max:72rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+h1,h2,h3{font-family:var(--font-serif);font-weight:400;line-height:1.2;margin:0}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dark);margin:0 0 1rem}
+.btn{display:inline-block;background:var(--ink);color:var(--surface);padding:.95rem 2rem;border:0;border-radius:var(--radius);font:inherit;font-size:.95rem;letter-spacing:.04em;text-decoration:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--accent-dark)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+section{padding-block:var(--space)}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);max-width:20ch}
+.intro{color:var(--ink-soft);max-width:36rem;margin:1.25rem 0 3.5rem}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:2.5rem;counter-reset:s}
+.steps li{counter-increment:s;border-top:1px solid var(--line);padding-top:1.5rem}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--font-serif);font-size:2rem;color:var(--accent)}
+.steps h3{font-size:1.25rem;margin:.5rem 0}
+.steps p{margin:0;color:var(--ink-soft);font-size:.95rem}
+@media(min-width:40rem){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:70rem){.steps{grid-template-columns:repeat(5,1fr);gap:2rem}}
+</style>
+</head>
+<body>
+<section aria-labelledby="koraki-title">
+  <div class="wrap">
+    <p class="eyebrow">Postopek</p>
+    <h2 id="koraki-title">Kako poteka izdelava</h2>
+    <p class="intro">Pet jasnih korakov od prvega pogovora do vgrajenega pohištva.</p>
+    <ol class="steps">
+      <li><h3>Povpraševanje</h3><p>Opišete nam prostor in želje. Odgovorimo vam in se dogovorimo za ogled ali pogovor.</p></li>
+      <li><h3>Ogled in meritve</h3><p>Prostor natančno izmerimo in skupaj določimo zahteve glede funkcije in videza.</p></li>
+      <li><h3>Načrt in izbor materialov</h3><p>Pripravimo načrt in predlog materialov. Pred izdelavo ga skupaj uskladimo.</p></li>
+      <li><h3>Izdelava v delavnici</h3><p>Pohištvo izdelamo po dogovorjenem načrtu, s skrbnim nadzorom v vsaki fazi.</p></li>
+      <li><h3>Montaža</h3><p>Pohištvo dostavimo, vgradimo in prilagodimo prostoru ter vam ga predamo.</p></li>
+    </ol>
+  </div>
+</section>
+</body>
+</html>

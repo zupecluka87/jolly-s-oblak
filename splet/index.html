@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Predloge razdelkov – JOLLY-S</title>
+<style>
+:root{
+  --bg:#faf7f2;--bg-alt:#f3eee6;--surface:#fffdf9;--ink:#2b2622;--ink-soft:#6b625a;
+  --accent:#8a6a47;--accent-dark:#6e5236;--line:#e4dccf;--focus:#1f5f8b;
+  --font-serif:Georgia,"Times New Roman",serif;--font-sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --space:clamp(4rem,9vw,8rem);--radius:4px;--max:72rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+h1,h2,h3{font-family:var(--font-serif);font-weight:400;line-height:1.2;margin:0}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dark);margin:0 0 1rem}
+.btn{display:inline-block;background:var(--ink);color:var(--surface);padding:.95rem 2rem;border:0;border-radius:var(--radius);font:inherit;font-size:.95rem;letter-spacing:.04em;text-decoration:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--accent-dark)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+main{padding-block:var(--space)}
+h1{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:1rem}
+p{color:var(--ink-soft)}
+ol{padding:0;margin:2.5rem 0 0;list-style:none;border-top:1px solid var(--line)}
+li{border-bottom:1px solid var(--line)}
+a{display:block;padding:1.1rem 0;color:var(--ink);text-decoration:none;font-family:var(--font-serif);font-size:1.2rem}
+a:hover{color:var(--accent-dark)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="eyebrow">JOLLY-S d.o.o.</p>
+  <h1>Predloge razdelkov</h1>
+  <p>Samostojne HTML/CSS predloge za jolly-s.si, namenjene ročnemu pregledu.</p>
+  <ol>
+    <li><a href="01-hero.html">1. Hero</a></li>
+    <li><a href="02-kako-poteka-izdelava.html">2. Kako poteka izdelava</a></li>
+    <li><a href="03-reference.html">3. Reference</a></li>
+    <li><a href="04-faq.html">4. Pogosta vprašanja</a></li>
+    <li><a href="05-povprasevanje.html">5. Povpraševanje</a></li>
+  </ol>
+</main>
+</body>
+</html>

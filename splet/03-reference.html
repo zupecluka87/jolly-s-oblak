@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference – JOLLY-S</title>
+<style>
+:root{
+  --bg:#faf7f2;--bg-alt:#f3eee6;--surface:#fffdf9;--ink:#2b2622;--ink-soft:#6b625a;
+  --accent:#8a6a47;--accent-dark:#6e5236;--line:#e4dccf;--focus:#1f5f8b;
+  --font-serif:Georgia,"Times New Roman",serif;--font-sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --space:clamp(4rem,9vw,8rem);--radius:4px;--max:72rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem)}
+h1,h2,h3{font-family:var(--font-serif);font-weight:400;line-height:1.2;margin:0}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-dark);margin:0 0 1rem}
+.btn{display:inline-block;background:var(--ink);color:var(--surface);padding:.95rem 2rem;border:0;border-radius:var(--radius);font:inherit;font-size:.95rem;letter-spacing:.04em;text-decoration:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--accent-dark)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+section{padding-block:var(--space);background:var(--bg-alt)}
+h2{font-size:clamp(1.8rem,4vw,2.8rem)}
+.intro{color:var(--ink-soft);max-width:36rem;margin:1.25rem 0 3.5rem}
+.grid{list-style:none;margin:0;padding:0;display:grid;gap:2rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,19rem),1fr))}
+.card{background:var(--surface);border-radius:var(--radius);overflow:hidden;height:100%;border:1px solid var(--line)}
+.card__img{aspect-ratio:4/3;background:var(--line);display:grid;place-items:center;color:var(--ink-soft);font-size:.85rem}
+.card__img img{width:100%;height:100%;object-fit:cover}
+.card__body{padding:1.5rem}
+.card__cat{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-dark);margin:0 0 .5rem}
+.card h3{font-size:1.2rem;margin-bottom:.5rem}
+.card p:last-child{margin:0;color:var(--ink-soft);font-size:.92rem}
+</style>
+</head>
+<body>
+<section aria-labelledby="ref-title">
+  <div class="wrap">
+    <p class="eyebrow">Reference</p>
+    <h2 id="ref-title">Izbrani projekti</h2>
+    <p class="intro">Predloga: fotografije in opise projektov dodajte ročno. Prostor za sliko zamenjate z &lt;img src="…" alt="…"&gt;.</p>
+    <ul class="grid">
+      <li><article class="card"><div class="card__img" role="img" aria-label="Mesto za fotografijo projekta">[ Fotografija projekta ]</div><div class="card__body"><p class="card__cat">Kuhinje</p><h3>Kuhinja po meri – [naziv projekta]</h3><p>[Kratek opis projekta, lokacija in uporabljeni materiali.]</p></div></article></li>
+      <li><article class="card"><div class="card__img" role="img" aria-label="Mesto za fotografijo projekta">[ Fotografija projekta ]</div><div class="card__body"><p class="card__cat">Garderobe</p><h3>Garderobna omara – [naziv projekta]</h3><p>[Kratek opis projekta, lokacija in uporabljeni materiali.]</p></div></article></li>
+      <li><article class="card"><div class="card__img" role="img" aria-label="Mesto za fotografijo projekta">[ Fotografija projekta ]</div><div class="card__body"><p class="card__cat">Vgradne omare</p><h3>Vgradna omara – [naziv projekta]</h3><p>[Kratek opis projekta, lokacija in uporabljeni materiali.]</p></div></article></li>
+      <li><article class="card"><div class="card__img" role="img" aria-label="Mesto za fotografijo projekta">[ Fotografija projekta ]</div><div class="card__body"><p class="card__cat">Kuhinje</p><h3>Kuhinja po meri – [naziv projekta]</h3><p>[Kratek opis projekta, lokacija in uporabljeni materiali.]</p></div></article></li>
+      <li><article class="card"><div class="card__img" role="img" aria-label="Mesto za fotografijo projekta">[ Fotografija projekta ]</div><div class="card__body"><p class="card__cat">Garderobe</p><h3>Garderobna soba – [naziv projekta]</h3><p>[Kratek opis projekta, lokacija in uporabljeni materiali.]</p></div></article></li>
+      <li><article class="card"><div class="card__img" role="img" aria-label="Mesto za fotografijo projekta">[ Fotografija projekta ]</div><div class="card__body"><p class="card__cat">Vgradne omare</p><h3>Vgradna omara – [naziv projekta]</h3><p>[Kratek opis projekta, lokacija in uporabljeni materiali.]</p></div></article></li>
+    </ul>
+  </div>
+</section>
+</body>
+</html>
